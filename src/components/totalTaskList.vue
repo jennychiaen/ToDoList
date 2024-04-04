@@ -23,14 +23,14 @@
   <h2 v-if="vm.task.length === 0">目前無待辦事項</h2>
 </template>
 <script setup lang="ts">
-import { inject, provide, reactive, ref, watch } from 'vue';
+import {  reactive, watch } from 'vue';
 import taskStore from '../stores/task.ts';
 
 const vm = reactive({
   task: [] as any,
 });
 
-const currentTab = ref<string>(inject('tabName')!);
+// const currentTab = ref<string>(inject('tabName')!);
 
 const clickCheckBox = (sn: number) => {
   console.log('clickCheckBox', sn);
